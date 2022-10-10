@@ -1,7 +1,9 @@
 ---
-title: ECS
-layout: ../../layouts/MainLayout.astro
+title: Whitecloud Services
+layout: /src/layouts/MainLayout.astro
 ---
+
+
 
 ## Requirements
 
@@ -12,10 +14,6 @@ No requirements.
 The following providers are used by this module:
 
 - <a name="provider_aws"></a> [aws](#provider\_aws)
-
-## Modules
-
-No modules.
 
 ## Resources
 
@@ -45,6 +43,10 @@ The following resources are used by this module:
 - [aws_partition.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/partition) (data source)
 - [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) (data source)
 - [aws_secretsmanager_secret_version.github](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/secretsmanager_secret_version) (data source)
+
+## Modules
+
+No modules.
 
 ## Required Inputs
 
@@ -182,3 +184,5 @@ Description: n/a
 ### <a name="output_task_role_arn"></a> [task\_role\_arn](#output\_task\_role\_arn)
 
 Description: TODO: Split role in two roles
+
+

@@ -1,3 +1,8 @@
+---
+title: Whitecloud Services
+layout: /src/layouts/MainLayout.astro
+---
+
 # Terraform
 
 This github repository contains the infrastructure automation for AWS using Terraform from Hashicorp.
@@ -24,13 +29,18 @@ You will need the following environment variables:
 
 ### Project `docker`
 
-Current approach consists of using ECS as a container orchestrator. This folder is to keep a base ubuntu image, so we can use it in all the rest of images.
+Current approach consists of using ECS as a container orchestrator. This folder is to keep a base ubuntu image, so we
+can use it in all the rest of images.
 
-It also contains a sample docker-compose.yml file to provision a private cloud formation for mobile API, which could be useful to provide additional environments to QA team (on-demand).
+It also contains a sample docker-compose.yml file to provision a private cloud formation for mobile API, which could be
+useful to provide additional environments to QA team (on-demand).
 
 ### Project `whitecloud`
 
-This project is configured to have a single terraform workspace (default). Currently, it configures a VPC, VPNs, subnets, etc. and this information is shared across a remote state. Any other project, can load the information from the terraform state without having to worry about main infrastructure components. At the same, we reuse and keep critical components safe from environments (i.e: VPNs, NAT instances, Squid Proxy, etc.)
+This project is configured to have a single terraform workspace (default). Currently, it configures a VPC, VPNs,
+subnets, etc. and this information is shared across a remote state. Any other project, can load the information from the
+terraform state without having to worry about main infrastructure components. At the same, we reuse and keep critical
+components safe from environments (i.e: VPNs, NAT instances, Squid Proxy, etc.)
 
 Services provisioned:
 
@@ -50,7 +60,10 @@ This project is configured with `dev` and `uat` environments currently, but will
 - pre (maybe)
 - prod
 
-The goal of this project is to contain anything that is environment specific. Currently is agnostic to the base infrastructure because we wanted to reuse Flatex's UAT environment in our dev, test and uat environments. But this project can perfectly provision a specific VPC for each environment, without using the main one (It's up to discussion with TrueNode).
+The goal of this project is to contain anything that is environment specific. Currently is agnostic to the base
+infrastructure because we wanted to reuse Flatex's UAT environment in our dev, test and uat environments. But this
+project can perfectly provision a specific VPC for each environment, without using the main one (It's up to discussion
+with TrueNode).
 
 Services provisioned:
 
@@ -60,7 +73,8 @@ Services provisioned:
 
 ## Secrets
 
-Secrets needs to be stored in AWS secret manager to be encrypted wit CMK (Custom Master Key). We enabled password rotation for databases, but it is mandatory to use a specific JSON structure (See RDS module).
+Secrets needs to be stored in AWS secret manager to be encrypted wit CMK (Custom Master Key). We enabled password
+rotation for databases, but it is mandatory to use a specific JSON structure (See RDS module).
 
 NOTE: If rotation lambda application doesn't find this estructure, it won't be able to rotate credentials.
 
@@ -98,7 +112,8 @@ aws ecs update-service --cluster whitecloud-dev-ecs \
   --force-new-deployment --region eu-central-1
 ```
 
-> When having a single instance, this doesn't update the service. You need to set `minimumHealthyPercent` to zero or configure 2 replicas to avoid downtime. (See documentation in Notion)
+> When having a single instance, this doesn't update the service. You need to set `minimumHealthyPercent` to zero or
+> configure 2 replicas to avoid downtime. (See documentation in Notion)
 
 ---
 
@@ -109,3 +124,11 @@ aws ecs update-service --cluster whitecloud-dev-ecs \
 Birdbox is the alias for mobile related services, currently GraphQL engine.
 
 [Birdbox GitHub](https://github.com/whiteboxservices/birdbox)
+
+## Documentation
+
+Terraform-docs is used for generating the documentation. For running locally, install terraform-docs on your machine
+and `make documentation` .
+
+When deploying to main, a pipeline(`documentation.yaml`) is triggered that updates the documentation automatically and
+uploads the file to an S3 bucket.

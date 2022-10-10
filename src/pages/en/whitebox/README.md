@@ -1,14 +1,9 @@
 ---
-title: Whitebox
-layout: ../../layouts/MainLayout.astro
+title: Whitecloud Services
+layout: /src/layouts/MainLayout.astro
 ---
 
-# Hi there!
 
-This is your first markdown page. It probably isn't styled much, although
-Markdown does support **bold** and _italics._
-
-To learn more about adding a layout to your page, read the next section on **Markdown Layouts.**
 
 ## Requirements
 
@@ -24,52 +19,6 @@ The following providers are used by this module:
 
 - <a name="provider_terraform"></a> [terraform](#provider\_terraform)
 
-## Modules
-
-The following Modules are called:
-
-### <a name="module_fake-services"></a> [fake-services](#module\_fake-services)
-
-Source: ./modules/fake-services
-
-Version:
-
-### <a name="module_frontend"></a> [frontend](#module\_frontend)
-
-Source: ./modules/frontend
-
-Version:
-
-### <a name="module_image-service"></a> [image-service](#module\_image-service)
-
-Source: ./modules/image-service
-
-Version:
-
-### <a name="module_nginx"></a> [nginx](#module\_nginx)
-
-Source: ./modules/nginx
-
-Version:
-
-### <a name="module_performance-service"></a> [performance-service](#module\_performance-service)
-
-Source: ./modules/performance-service
-
-Version:
-
-### <a name="module_projection-engine"></a> [projection-engine](#module\_projection-engine)
-
-Source: ./modules/projection-engine
-
-Version:
-
-### <a name="module_whitebox-core"></a> [whitebox-core](#module\_whitebox-core)
-
-Source: ./modules/whitebox-core
-
-Version:
-
 ## Resources
 
 The following resources are used by this module:
@@ -77,6 +26,52 @@ The following resources are used by this module:
 - [aws_service_discovery_private_dns_namespace.whitebox](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/service_discovery_private_dns_namespace) (resource)
 - [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) (data source)
 - [terraform_remote_state.shared](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) (data source)
+
+## Modules
+
+The following Modules are called:
+
+### <a name="module_fake-services"></a> [fake-services](./modules/fake-services/README)
+
+Source: ./modules/fake-services
+
+Version:
+
+### <a name="module_frontend"></a> [frontend](./modules/frontend/README)
+
+Source: ./modules/frontend
+
+Version:
+
+### <a name="module_image-service"></a> [image-service](./modules/image-service/README)
+
+Source: ./modules/image-service
+
+Version:
+
+### <a name="module_nginx"></a> [nginx](./modules/nginx/README)
+
+Source: ./modules/nginx
+
+Version:
+
+### <a name="module_performance-service"></a> [performance-service](./modules/performance-service/README)
+
+Source: ./modules/performance-service
+
+Version:
+
+### <a name="module_projection-engine"></a> [projection-engine](./modules/projection-engine/README)
+
+Source: ./modules/projection-engine
+
+Version:
+
+### <a name="module_whitebox-core"></a> [whitebox-core](./modules/whitebox-core/README)
+
+Source: ./modules/whitebox-core
+
+Version:
 
 ## Required Inputs
 
@@ -128,3 +123,18 @@ Default: `"eu-central-1"`
 
 No outputs.
 
+
+
+
+# Whitebox
+
+This terraform project contains all services required to run `whitebox-on-rails` application:
+
+- Fake-services
+- Image service
+- Performance service
+- Projection engine
+- Main application (Rails)
+
+For more information, please read documentation:
+[Documentation](URL_HERE)

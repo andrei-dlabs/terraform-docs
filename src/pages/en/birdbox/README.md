@@ -1,7 +1,9 @@
 ---
-title: Birdbox
-layout: ../../layouts/MainLayout.astro
+title: Whitecloud Services
+layout: /src/layouts/MainLayout.astro
 ---
+
+
 
 ## Requirements
 
@@ -18,10 +20,6 @@ The following providers are used by this module:
 - <a name="provider_random"></a> [random](#provider\_random)
 
 - <a name="provider_terraform"></a> [terraform](#provider\_terraform)
-
-## Modules
-
-No modules.
 
 ## Resources
 
@@ -42,6 +40,10 @@ The following resources are used by this module:
 - [aws_secretsmanager_secret_version.db_user](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/secretsmanager_secret_version) (data source)
 - [aws_secretsmanager_secret_version.jwt_secret](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/secretsmanager_secret_version) (data source)
 - [terraform_remote_state.shared](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) (data source)
+
+## Modules
+
+No modules.
 
 ## Required Inputs
 
@@ -156,3 +158,13 @@ Default: `"eu-central-1"`
 ## Outputs
 
 No outputs.
+
+
+
+
+# Birdbox
+
+Birdbox, it's an alias for mobile app services, and they are based on Hasura GraphQL engine. This project deploys a docker image and therefore, it requires an ECS cluster.
+
+For more information, please read documentation:
+[Documentation](https://www.notion.so/whtbx/Birdbox-556a6d7ed9d342d989436b6c60f88b5d)

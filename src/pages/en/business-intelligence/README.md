@@ -1,7 +1,9 @@
 ---
-title: Business Intelligence
-layout: ../../layouts/MainLayout.astro
+title: Whitecloud Services
+layout: /src/layouts/MainLayout.astro
 ---
+
+
 
 ## Requirements
 
@@ -15,34 +17,34 @@ The following providers are used by this module:
 
 - <a name="provider_terraform"></a> [terraform](#provider\_terraform)
 
-## Modules
-
-The following Modules are called:
-
-### <a name="module_compute"></a> [compute](#module\_compute)
-
-Source: ./modules/compute
-
-Version:
-
-### <a name="module_deploy"></a> [deploy](#module\_deploy)
-
-Source: ./modules/deploy
-
-Version:
-
-### <a name="module_rds"></a> [rds](#module\_rds)
-
-Source: ./modules/rds
-
-Version:
-
 ## Resources
 
 The following resources are used by this module:
 
 - [terraform_remote_state.wbservices](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) (data source)
 - [terraform_remote_state.whitecloud](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) (data source)
+
+## Modules
+
+The following Modules are called:
+
+### <a name="module_compute"></a> [compute](./modules/compute/README)
+
+Source: ./modules/compute
+
+Version:
+
+### <a name="module_deploy"></a> [deploy](./modules/deploy/README)
+
+Source: ./modules/deploy
+
+Version:
+
+### <a name="module_rds"></a> [rds](./modules/rds/README)
+
+Source: ./modules/rds
+
+Version:
 
 ## Required Inputs
 
@@ -83,3 +85,10 @@ Description: Admin password for the BI RDS instance
 ### <a name="output_db_username"></a> [db\_username](#output\_db\_username)
 
 Description: Admin username for the BI RDS instance
+
+
+
+
+# Business Intelligence Project
+
+See the individual modules for more information.

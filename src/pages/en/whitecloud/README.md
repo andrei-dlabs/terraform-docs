@@ -1,7 +1,9 @@
 ---
-title: Whitecloud
-layout: ../../layouts/MainLayout.astro
+title: Whitecloud Services
+layout: /src/layouts/MainLayout.astro
 ---
+
+
 
 ## Requirements
 
@@ -13,133 +15,139 @@ The following requirements are needed by this module:
 
 No providers.
 
+## Resources
+
+No resources.
+
 ## Modules
 
 The following Modules are called:
 
-### <a name="module_audit"></a> [audit](#module\_audit)
+### <a name="module_audit"></a> [audit](./modules/audit/README)
 
 Source: ./modules/audit
 
 Version:
 
-### <a name="module_aws"></a> [aws](#module\_aws)
+### <a name="module_aws"></a> [aws](./modules/aws/README)
 
 Source: ./modules/aws
 
 Version:
 
-### <a name="module_bi_codedeploy_storage"></a> [bi\_codedeploy\_storage](#module\_bi\_codedeploy\_storage)
+### <a name="module_bi_codedeploy_storage"></a> [bi\_codedeploy\_storage](./modules/codedeploy-storage/README)
 
 Source: ./modules/codedeploy-storage
 
 Version:
 
-### <a name="module_cert"></a> [cert](#module\_cert)
+### <a name="module_cert"></a> [cert](./modules/cert/README)
 
 Source: ./modules/cert
 
 Version:
 
-### <a name="module_cloudtrail"></a> [cloudtrail](#module\_cloudtrail)
+### <a name="module_cloudtrail"></a> [cloudtrail](./modules/cloudtrail/README)
 
 Source: ./modules/cloudtrail
 
 Version:
 
-### <a name="module_cloudwatch"></a> [cloudwatch](#module\_cloudwatch)
+### <a name="module_cloudwatch"></a> [cloudwatch](./modules/cloudwatch/README)
 
 Source: ./modules/cloudwatch
 
 Version:
 
-### <a name="module_dms"></a> [dms](#module\_dms)
+### <a name="module_dms"></a> [dms](./modules/dms/README)
 
 Source: ./modules/dms
 
 Version:
 
-### <a name="module_ecs"></a> [ecs](#module\_ecs)
+### <a name="module_documentation"></a> [documentation](./modules/documentation/README)
+
+Source: ./modules/documentation
+
+Version:
+
+### <a name="module_ecs"></a> [ecs](../ecs/README)
 
 Source: ../ecs
 
 Version:
 
-### <a name="module_flatex_prod"></a> [flatex\_prod](#module\_flatex\_prod)
+### <a name="module_flatex_prod"></a> [flatex\_prod](./modules/flatex/README)
 
 Source: ./modules/flatex
 
 Version:
 
-### <a name="module_flatex_uat"></a> [flatex\_uat](#module\_flatex\_uat)
+### <a name="module_flatex_uat"></a> [flatex\_uat](./modules/flatex/README)
 
 Source: ./modules/flatex
 
 Version:
 
-### <a name="module_guardduty"></a> [guardduty](#module\_guardduty)
+### <a name="module_guardduty"></a> [guardduty](./modules/guardduty/README)
 
 Source: ./modules/guardduty
 
 Version:
 
-### <a name="module_proxy"></a> [proxy](#module\_proxy)
+### <a name="module_proxy"></a> [proxy](./modules/proxy/README)
 
 Source: ./modules/proxy
 
 Version:
 
-### <a name="module_rails_assets"></a> [rails\_assets](#module\_rails\_assets)
+### <a name="module_rails_assets"></a> [rails\_assets](./modules/rails-assets/README)
 
 Source: ./modules/rails-assets
 
 Version:
 
-### <a name="module_rds"></a> [rds](#module\_rds)
+### <a name="module_rds"></a> [rds](./modules/rds/README)
 
 Source: ./modules/rds
 
 Version:
 
-### <a name="module_resource_groups"></a> [resource\_groups](#module\_resource\_groups)
+### <a name="module_resource_groups"></a> [resource\_groups](./modules/resource-groups/README)
 
 Source: ./modules/resource-groups
 
 Version:
 
-### <a name="module_securityhub"></a> [securityhub](#module\_securityhub)
+### <a name="module_securityhub"></a> [securityhub](./modules/securityhub/README)
 
 Source: ./modules/securityhub
 
 Version:
 
-### <a name="module_ssm"></a> [ssm](#module\_ssm)
+### <a name="module_ssm"></a> [ssm](./modules/ssm/README)
 
 Source: ./modules/ssm
 
 Version:
 
-### <a name="module_state"></a> [state](#module\_state)
+### <a name="module_state"></a> [state](./modules/state/README)
 
 Source: ./modules/state
 
 Version:
 
-### <a name="module_vpn"></a> [vpn](#module\_vpn)
+### <a name="module_vpn"></a> [vpn](./modules/vpn/README)
 
 Source: ./modules/vpn
 
 Version:
 
-### <a name="module_whitecloud"></a> [whitecloud](#module\_whitecloud)
+### <a name="module_whitecloud"></a> [whitecloud](./modules/whitecloud/README)
 
 Source: ./modules/whitecloud
 
 Version:
-
-## Resources
-
-No resources.
 
 ## Required Inputs
 
@@ -225,6 +233,10 @@ Description: n/a
 
 Description: n/a
 
+### <a name="output_documentation_readwrite_iam_credentials"></a> [documentation\_readwrite\_iam\_credentials](#output\_documentation\_readwrite\_iam\_credentials)
+
+Description: Credentials used by the read-write documentation bucket IAM user
+
 ### <a name="output_internal"></a> [internal](#output\_internal)
 
 Description: n/a
@@ -288,3 +300,6 @@ Description: Transit gateways used to reach Flatex network
 ### <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id)
 
 Description: n/a
+
+
+

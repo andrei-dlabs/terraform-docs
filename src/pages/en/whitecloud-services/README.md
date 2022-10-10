@@ -1,7 +1,9 @@
 ---
 title: Whitecloud Services
-layout: ../../layouts/MainLayout.astro
+layout: /src/layouts/MainLayout.astro
 ---
+
+
 
 ## Requirements
 
@@ -19,112 +21,112 @@ The following providers are used by this module:
 
 - <a name="provider_terraform"></a> [terraform](#provider\_terraform)
 
-## Modules
-
-The following Modules are called:
-
-### <a name="module_alb"></a> [alb](#module\_alb)
-
-Source: ./modules/alb
-
-Version:
-
-### <a name="module_alb_internal"></a> [alb\_internal](#module\_alb\_internal)
-
-Source: ./modules/internal_alb
-
-Version:
-
-### <a name="module_database"></a> [database](#module\_database)
-
-Source: ./modules/rds
-
-Version:
-
-### <a name="module_ecs_dev"></a> [ecs\_dev](#module\_ecs\_dev)
-
-Source: ../ecs
-
-Version:
-
-### <a name="module_ecs_pre"></a> [ecs\_pre](#module\_ecs\_pre)
-
-Source: ../ecs
-
-Version:
-
-### <a name="module_ecs_prod"></a> [ecs\_prod](#module\_ecs\_prod)
-
-Source: ../ecs
-
-Version:
-
-### <a name="module_ecs_sandbox"></a> [ecs\_sandbox](#module\_ecs\_sandbox)
-
-Source: ../ecs
-
-Version:
-
-### <a name="module_ecs_test"></a> [ecs\_test](#module\_ecs\_test)
-
-Source: ../ecs
-
-Version:
-
-### <a name="module_ecs_uat"></a> [ecs\_uat](#module\_ecs\_uat)
-
-Source: ../ecs
-
-Version:
-
-### <a name="module_efs"></a> [efs](#module\_efs)
-
-Source: ./modules/efs
-
-Version:
-
-### <a name="module_elasticache"></a> [elasticache](#module\_elasticache)
-
-Source: ./modules/elasticache
-
-Version:
-
-### <a name="module_flatex_nat"></a> [flatex\_nat](#module\_flatex\_nat)
-
-Source: ./modules/flatex_nat
-
-Version:
-
-### <a name="module_resource_groups"></a> [resource\_groups](#module\_resource\_groups)
-
-Source: ./modules/resource-groups
-
-Version:
-
-### <a name="module_vpc"></a> [vpc](#module\_vpc)
-
-Source: terraform-aws-modules/vpc/aws
-
-Version:
-
-### <a name="module_vpc_setup"></a> [vpc\_setup](#module\_vpc\_setup)
-
-Source: ./modules/vpc-setup
-
-Version:
-
-### <a name="module_whitebox_db"></a> [whitebox\_db](#module\_whitebox\_db)
-
-Source: ./modules/rds
-
-Version:
-
 ## Resources
 
 The following resources are used by this module:
 
 - [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) (data source)
 - [terraform_remote_state.shared](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state) (data source)
+
+## Modules
+
+The following Modules are called:
+
+### <a name="module_alb"></a> [alb](./modules/alb/README)
+
+Source: ./modules/alb
+
+Version:
+
+### <a name="module_alb_internal"></a> [alb\_internal](./modules/internal_alb/README)
+
+Source: ./modules/internal_alb
+
+Version:
+
+### <a name="module_database"></a> [database](./modules/rds/README)
+
+Source: ./modules/rds
+
+Version:
+
+### <a name="module_ecs_dev"></a> [ecs\_dev](../ecs/README)
+
+Source: ../ecs
+
+Version:
+
+### <a name="module_ecs_pre"></a> [ecs\_pre](../ecs/README)
+
+Source: ../ecs
+
+Version:
+
+### <a name="module_ecs_prod"></a> [ecs\_prod](../ecs/README)
+
+Source: ../ecs
+
+Version:
+
+### <a name="module_ecs_sandbox"></a> [ecs\_sandbox](../ecs/README)
+
+Source: ../ecs
+
+Version:
+
+### <a name="module_ecs_test"></a> [ecs\_test](../ecs/README)
+
+Source: ../ecs
+
+Version:
+
+### <a name="module_ecs_uat"></a> [ecs\_uat](../ecs/README)
+
+Source: ../ecs
+
+Version:
+
+### <a name="module_efs"></a> [efs](./modules/efs/README)
+
+Source: ./modules/efs
+
+Version:
+
+### <a name="module_elasticache"></a> [elasticache](./modules/elasticache/README)
+
+Source: ./modules/elasticache
+
+Version:
+
+### <a name="module_flatex_nat"></a> [flatex\_nat](./modules/flatex_nat/README)
+
+Source: ./modules/flatex_nat
+
+Version:
+
+### <a name="module_resource_groups"></a> [resource\_groups](./modules/resource-groups/README)
+
+Source: ./modules/resource-groups
+
+Version:
+
+### <a name="module_vpc"></a> [vpc](terraform-aws-modules/vpc/aws/README)
+
+Source: terraform-aws-modules/vpc/aws
+
+Version:
+
+### <a name="module_vpc_setup"></a> [vpc\_setup](./modules/vpc-setup/README)
+
+Source: ./modules/vpc-setup
+
+Version:
+
+### <a name="module_whitebox_db"></a> [whitebox\_db](./modules/rds/README)
+
+Source: ./modules/rds
+
+Version:
 
 ## Required Inputs
 
@@ -247,3 +249,6 @@ Description: n/a
 ### <a name="output_vpc"></a> [vpc](#output\_vpc)
 
 Description: VPC reusable attributes (id, cidr, subnets, route-tables, etc.)
+
+
+

@@ -46,14 +46,13 @@ export type Sidebar = Record<typeof KNOWN_LANGUAGE_CODES[number],
 export const SIDEBAR: Sidebar = {
     en: {
         'Section Header': [
-            {text: 'Introduction', link: 'en/introduction'},
-            {text: "Whitecloud (core)", link: "en/whitecloud"},
-            {text: "Whitecloud Services", link: "en/whitecloud-services"},
-            {text: "Whitebox", link: "en/whitebox"},
-            {text: "Business Intelligence", link: "en/business-intelligence"},
-            {text: "ECS", link: "en/ecs"},
-            {text: "Birdbox", link: "en/birdbox"},
-        ],
-        'Another Section': [{text: 'Page 4', link: 'en/page-4'}],
+            {text: 'Introduction', link: 'en/README'},
+            {text: "Whitecloud (core)", link: "en/whitecloud/README"},
+            {text: "Whitecloud Services", link: "en/whitecloud-services/README"},
+            {text: "Whitebox", link: "en/whitebox/README"},
+            {text: "Business Intelligence", link: "en/business-intelligence/README"},
+            {text: "ECS", link: "en/ecs/README"},
+            {text: "Birdbox", link: "en/birdbox/README"},
+        ]
     },
 };
