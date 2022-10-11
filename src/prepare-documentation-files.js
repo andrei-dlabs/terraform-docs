@@ -34,7 +34,7 @@ async function downloadDocumentationFiles() {
     })
 
 
-    await exec(`aws s3 sync ${process.env.DOCS_BUCKET_ARN} ./src/pages/en/`);
+    await exec(`aws s3 sync s3://whitecloud-s3-terraform-docs/ ./src/pages/en/`);
     console.log('Download finished!');
 
 }
