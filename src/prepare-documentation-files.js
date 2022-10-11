@@ -18,15 +18,20 @@ async function main() {
 }
 
 async function downloadDocumentationFiles() {
+
+    const docsAccessKey = process.env.DOCS_AWS_ACCESS_KEY_ID
+    const docsSecretAccessKey = process.env.DOCS_AWS_SECRET_ACCESS_KEY
+    const docsBucketArn = process.env.DOCS_BUCKET_ARN
+
     console.log('Starting the download..');
 
     AWS.config.update({
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: docsAccessKey,
+        secretAccessKey: docsSecretAccessKey,
     })
 
 
-    await exec('aws s3 sync s3://whitecloud-s3-terraform-docs/ ./src/pages/en/');
+    await exec(`aws s3 sync ${process.env.DOCS_BUCKET_ARN} ./src/pages/en/`);
     console.log('Download finished!');
 
 }
@@ -34,7 +39,7 @@ async function downloadDocumentationFiles() {
 async function iterateFiles(startPath, filter) {
 
     if (!fs.existsSync(startPath)) {
-        console.log("no dir ", startPath);
+        console.log("no directory ", startPath);
         return;
     }
 

@@ -23,6 +23,12 @@ No resources.
 
 The following Modules are called:
 
+### <a name="module_astrodocs"></a> [astrodocs](./modules/astrodocs/README)
+
+Source: ./modules/astrodocs
+
+Version:
+
 ### <a name="module_audit"></a> [audit](./modules/audit/README)
 
 Source: ./modules/audit
@@ -44,6 +50,12 @@ Version:
 ### <a name="module_cert"></a> [cert](./modules/cert/README)
 
 Source: ./modules/cert
+
+Version:
+
+### <a name="module_cloudfront-certs"></a> [cloudfront-certs](./modules/cloudfront-certs/README)
+
+Source: ./modules/cloudfront-certs
 
 Version:
 
@@ -205,6 +217,10 @@ Description: Credentials used by the read assets bucket IAM user
 
 Description: Credentials used by the read-write assets bucket IAM user
 
+### <a name="output_astrodocs_cf_s3"></a> [astrodocs\_cf\_s3](#output\_astrodocs\_cf\_s3)
+
+Description: Details for Astrodocs cloudfront/s3
+
 ### <a name="output_bastion"></a> [bastion](#output\_bastion)
 
 Description: n/a
@@ -224,6 +240,10 @@ Description: ARN of the S3 bucket used for code storage of BI operations
 ### <a name="output_bi_ops_s3_name"></a> [bi\_ops\_s3\_name](#output\_bi\_ops\_s3\_name)
 
 Description: Name of the S3 bucket used for code storage
+
+### <a name="output_cloudfront_cert"></a> [cloudfront\_cert](#output\_cloudfront\_cert)
+
+Description: Details for Cloudfront certificate
 
 ### <a name="output_db_subnet_name"></a> [db\_subnet\_name](#output\_db\_subnet\_name)
 
@@ -248,6 +268,10 @@ Description: n/a
 ### <a name="output_kms_logs_arn"></a> [kms\_logs\_arn](#output\_kms\_logs\_arn)
 
 Description: n/a
+
+### <a name="output_lambda_arn"></a> [lambda\_arn](#output\_lambda\_arn)
+
+Description: Details for Cloudfront certificate
 
 ### <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids)
 
