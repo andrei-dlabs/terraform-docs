@@ -23,6 +23,9 @@ async function downloadDocumentationFiles() {
     const docsSecretAccessKey = process.env.DOCS_AWS_SECRET_ACCESS_KEY
     const docsBucketArn = process.env.DOCS_BUCKET_ARN
 
+    console.log(docsAccessKey)
+    console.log(process.env.DOCS_AWS_ACCESS_KEY_ID)
+
     console.log('Starting the download..');
 
     AWS.config.update({
