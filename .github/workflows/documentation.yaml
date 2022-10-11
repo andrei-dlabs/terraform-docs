@@ -13,10 +13,10 @@ jobs:
     strategy:
       matrix:
         node-version: [ 18.x ]
-#    env:
+    env:
 #      DOCS_AWS_ACCESS_KEY_ID: ${{ secrets.DOCS_AWS_ACCESS_KEY_ID }}
 #      DOCS_AWS_SECRET_ACCESS_KEY: ${{ secrets.DOCS_AWS_SECRET_ACCESS_KEY }}
-#      DOCS_BUCKET_ARN: ${{ secrets.DOCS_BUCKET_ARN }}
+      DOCS_BUCKET_ARN: ${{ secrets.DOCS_BUCKET_ARN }}
 
     steps:
       - uses: actions/checkout@v3
