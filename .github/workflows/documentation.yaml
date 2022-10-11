@@ -37,7 +37,7 @@ jobs:
         run: npm ci
 
       - name: Update documentation files
-        run: node src/prepare-documentation-files.js
+        run: node src/prepare-documentation-files-pipeline.js
 
   build:
     runs-on: ubuntu-latest
