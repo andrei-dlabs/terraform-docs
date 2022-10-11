@@ -21,7 +21,7 @@ async function downloadDocumentationFiles() {
 
     console.log('Starting the download..');
 
-    const docsBucketArn = process.env.DOCS_BUCKET_ARN
+    const docsBucketArn = process.env.DOCS_BUCKET_ID
 
     await exec(`aws s3 sync ${docsBucketArn} ./src/pages/en/`);
     console.log('Download finished!');

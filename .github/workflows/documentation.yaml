@@ -14,9 +14,7 @@ jobs:
       matrix:
         node-version: [ 18.x ]
     env:
-#      DOCS_AWS_ACCESS_KEY_ID: ${{ secrets.DOCS_AWS_ACCESS_KEY_ID }}
-#      DOCS_AWS_SECRET_ACCESS_KEY: ${{ secrets.DOCS_AWS_SECRET_ACCESS_KEY }}
-      DOCS_BUCKET_ARN: ${{ secrets.DOCS_BUCKET_ARN }}
+      DOCS_BUCKET_ID: ${{ secrets.DOCS_BUCKET_ID }}
 
     steps:
       - uses: actions/checkout@v3
@@ -84,7 +82,7 @@ jobs:
           rm artifact.zip 
 
       - name: Deploy to S3
-        run: aws s3 sync ./dist/ s3://${{ secrets.ASTRO_BUCKET_ARN }}
+        run: aws s3 sync ./dist/ ${{ secrets.ASTRO_BUCKET_ID }}
 
 #      - name: Create CloudFront invalidation
 #        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
