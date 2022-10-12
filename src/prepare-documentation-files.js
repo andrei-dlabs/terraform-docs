@@ -21,10 +21,7 @@ async function downloadDocumentationFiles() {
 
     const docsAccessKey = process.env.DOCS_AWS_ACCESS_KEY_ID
     const docsSecretAccessKey = process.env.DOCS_AWS_SECRET_ACCESS_KEY
-    const docsBucketArn = process.env.DOCS_BUCKET_ARN
-
-    console.log(docsAccessKey)
-    console.log(process.env.DOCS_AWS_ACCESS_KEY_ID)
+    const docsBucketName = process.env.DOCS_BUCKET_ID
 
     console.log('Starting the download..');
 
@@ -34,7 +31,7 @@ async function downloadDocumentationFiles() {
     })
 
 
-    await exec(`aws s3 sync s3://whitecloud-s3-terraform-docs/ ./src/pages/en/`);
+    await exec(`aws s3 sync ${docsBucketName} ./src/pages/en/`);
     console.log('Download finished!');
 
 }
