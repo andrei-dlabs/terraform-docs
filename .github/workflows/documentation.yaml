@@ -81,7 +81,7 @@ jobs:
           rm artifact.zip 
 
       - name: Deploy to S3
-        run: aws s3 sync ./dist/ ${{ secrets.ASTRO_BUCKET_ID }}
+        run: aws s3 sync ./dist/ ${{ secrets.ASTRO_BUCKET_ID }} --delete
 
       - name: Create CloudFront invalidation
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
