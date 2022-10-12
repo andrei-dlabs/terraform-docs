@@ -1,5 +1,5 @@
 ---
-title: Whitecloud Services
+title: Whitebox
 layout: /src/layouts/MainLayout.astro
 ---
 
